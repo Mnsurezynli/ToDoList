@@ -5,7 +5,6 @@ import org.example.Model.Status;
 import java.time.LocalDate;
 
 public class TaskDto {
-
     private Long id;
     private String text;
     private Status status;

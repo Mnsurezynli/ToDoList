@@ -9,7 +9,7 @@ public interface ITaskService {
 
     void deleteTask(Long id);
 
-    TaskDto updateTask(Long id);
+    TaskDto updateTask(Long id,TaskDto taskDto);
 
     List<TaskDto> getAll();
 

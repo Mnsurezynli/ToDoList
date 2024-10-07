@@ -1,5 +1,5 @@
 package org.example.Model;
 
 public enum Status {
-    DONE,TODO,IN_PROGRESS;
+    DONE,NOT_DONE,IN_PROGRESS;
 }
