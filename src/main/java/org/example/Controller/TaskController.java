@@ -1,6 +1,7 @@
 package org.example.Controller;
 
 import org.example.Dto.TaskDto;
+import org.example.Model.Status;
 import org.example.Service.ITaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -34,8 +35,8 @@ public class TaskController {
     }
 
     @PutMapping("/TaskId")
-    public  ResponseEntity<TaskDto> updateTask(@PathVariable Long id ,@RequestBody  @Validated TaskDto taskDto){
-      TaskDto updated=  iTaskService.updateTask(id,taskDto);
+    public  ResponseEntity<TaskDto> updateTask(@PathVariable Long id , @RequestBody  @Validated TaskDto taskDto, @RequestBody @Validated Status newStatus){
+      TaskDto updated=  iTaskService.updateTask(id,taskDto,newStatus);
         return new ResponseEntity<>(updated,HttpStatus.OK);
     }
 

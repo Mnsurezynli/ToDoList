@@ -80,11 +80,11 @@ public class TaskServiceImpl implements ITaskService {
 
 
     @Transactional
-    public TaskDto updateTask(Long id, TaskDto taskDto) {
+    public TaskDto updateTask(Long id, TaskDto taskDto,Status newStatus) {
         Task task = taskRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("this task not found with id " + id));
         task.setUpdatedAt(LocalDate.from(LocalDateTime.now()));
-        Task task1 = convertToEntity(taskDto);
+        task.setStatus(newStatus);
         taskRepository.saveAndFlush(task);
         TaskDto taskDto1 = convertToDto(task);
         updateTaskList();
