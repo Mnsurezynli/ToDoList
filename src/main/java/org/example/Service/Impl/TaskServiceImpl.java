@@ -34,12 +34,22 @@ public class TaskServiceImpl implements ITaskService {
         this.tasks = getAll();
     }
 
-    private void saveTasksToFile() {
+    private void saveTasksToFile(TaskDto taskDto) {
         ObjectMapper mapper = new ObjectMapper();
+        List<TaskDto> tasks=new ArrayList<>();
         try {
-            mapper.writeValue(new File(FILE_PATH), tasks);
+            File file=new File(FILE_PATH);
+            if(file.exists()) {
+                tasks = mapper.readValue(file, mapper.getTypeFactory().constructCollectionType(List.class, TaskDto.class));
+            }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("can not read task from file");
+        }
+        tasks.add(taskDto);
+        try{
+            mapper.writeValue(new File(FILE_PATH),tasks);
+        }catch (IOException e){
+            throw  new RuntimeException("can not write task to file ");
         }
     }
 
@@ -56,7 +66,7 @@ public class TaskServiceImpl implements ITaskService {
         Task task1 = convertToEntity(taskDto);
         taskRepository.saveAndFlush(task1);
         updateTaskList();
-        saveTasksToFile();
+        saveTasksToFile(taskDto);
     }
 
     @Transactional
@@ -66,7 +76,6 @@ public class TaskServiceImpl implements ITaskService {
                 .orElseThrow(() -> new ResourceNotFoundException(" this task not found with id " + id));
         taskRepository.deleteById(id);
         updateTaskList();
-        saveTasksToFile();
     }
 
 
@@ -79,7 +88,7 @@ public class TaskServiceImpl implements ITaskService {
         taskRepository.saveAndFlush(task);
         TaskDto taskDto1 = convertToDto(task);
         updateTaskList();
-        saveTasksToFile();
+        saveTasksToFile(taskDto);
         return taskDto1;
     }
 
