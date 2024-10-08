@@ -37,13 +37,13 @@ public class TaskController {
 
     @PutMapping("/{id}")
     public  ResponseEntity<TaskDto> updateTask(@PathVariable Long id , @RequestBody  @Validated TaskDto taskDto, @RequestParam Status newStatus){
-      TaskDto updated=  iTaskService.updateTask(id,taskDto,newStatus);
+        TaskDto updated=  iTaskService.updateTask(id,taskDto,newStatus);
         return new ResponseEntity<>(updated,HttpStatus.OK);
     }
 
     @GetMapping("/all")
     public ResponseEntity<List<TaskDto>> getAll(){
-         List<TaskDto> taskDtos =iTaskService.getAll();
+        List<TaskDto> taskDtos =iTaskService.getAll();
         return  new ResponseEntity<>(taskDtos,HttpStatus.OK);
     }
 

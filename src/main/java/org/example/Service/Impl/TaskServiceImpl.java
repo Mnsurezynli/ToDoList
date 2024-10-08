@@ -3,7 +3,6 @@ package org.example.Service.Impl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.Dto.TaskDto;
 import org.example.Exception.ResourceNotFoundException;
-import org.example.Exception.TaskAlreadyExists;
 import org.example.Model.Status;
 import org.example.Model.Task;
 import org.example.Repository.TaskRepository;
@@ -14,11 +13,9 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.io.File;
 import java.io.IOException;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -36,7 +33,7 @@ public class TaskServiceImpl implements ITaskService {
 
     private void saveTasksToFile() {
         ObjectMapper mapper = new ObjectMapper();
-        List<TaskDto> tasks = getAll();
+        List<Task> tasks =taskRepository.findAll();
         try {
             mapper.writeValue(new File(FILE_PATH), tasks);
         } catch (IOException e) {
@@ -54,8 +51,6 @@ public class TaskServiceImpl implements ITaskService {
     public void addTask(TaskDto taskDto) {
         Task task1 = convertToEntity(taskDto);
         taskRepository.saveAndFlush(task1);
-        updateTaskList();
-        saveTasksToFile();
     }
 
     @Transactional
