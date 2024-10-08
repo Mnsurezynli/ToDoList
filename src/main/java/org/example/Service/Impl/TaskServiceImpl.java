@@ -34,22 +34,13 @@ public class TaskServiceImpl implements ITaskService {
         this.tasks = getAll();
     }
 
-    private void saveTasksToFile(TaskDto taskDto) {
+    private void saveTasksToFile() {
         ObjectMapper mapper = new ObjectMapper();
-        List<TaskDto> tasks=new ArrayList<>();
+        List<TaskDto> tasks = getAll();
         try {
-            File file=new File(FILE_PATH);
-            if(file.exists()) {
-                tasks = mapper.readValue(file, mapper.getTypeFactory().constructCollectionType(List.class, TaskDto.class));
-            }
+            mapper.writeValue(new File(FILE_PATH), tasks);
         } catch (IOException e) {
-            throw new RuntimeException("can not read task from file");
-        }
-        tasks.add(taskDto);
-        try{
-            mapper.writeValue(new File(FILE_PATH),tasks);
-        }catch (IOException e){
-            throw  new RuntimeException("can not write task to file ");
+            throw new RuntimeException("can not write task to file ");
         }
     }
 
@@ -58,6 +49,7 @@ public class TaskServiceImpl implements ITaskService {
     }
 
     @Transactional
+    @Override
     public void addTask(TaskDto taskDto) {
         Optional<Task> task = taskRepository.findById(taskDto.getId());
         if (task.isPresent()) {
@@ -66,7 +58,7 @@ public class TaskServiceImpl implements ITaskService {
         Task task1 = convertToEntity(taskDto);
         taskRepository.saveAndFlush(task1);
         updateTaskList();
-        saveTasksToFile(taskDto);
+        saveTasksToFile();
     }
 
     @Transactional
@@ -76,19 +68,20 @@ public class TaskServiceImpl implements ITaskService {
                 .orElseThrow(() -> new ResourceNotFoundException(" this task not found with id " + id));
         taskRepository.deleteById(id);
         updateTaskList();
+        saveTasksToFile();
     }
 
 
     @Transactional
-    public TaskDto updateTask(Long id, TaskDto taskDto,Status newStatus) {
+    public TaskDto updateTask(Long id, TaskDto taskDto, Status newStatus) {
         Task task = taskRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("this task not found with id " + id));
-        task.setUpdatedAt(LocalDate.from(LocalDateTime.now()));
+        task.setUpdatedAt(LocalDate.from(LocalDateTime.now()).atStartOfDay());
         task.setStatus(newStatus);
         taskRepository.saveAndFlush(task);
         TaskDto taskDto1 = convertToDto(task);
         updateTaskList();
-        saveTasksToFile(taskDto);
+        saveTasksToFile();
         return taskDto1;
     }
 
@@ -129,6 +122,7 @@ public class TaskServiceImpl implements ITaskService {
         taskDto.setCreatedAt(task.getCreatedAt());
         taskDto.setUpdatedAt(task.getUpdatedAt());
         return taskDto;
+
     }
 
     public Task convertToEntity(TaskDto taskDto) {
@@ -137,6 +131,8 @@ public class TaskServiceImpl implements ITaskService {
         task.setStatus(taskDto.getStatus());
         task.setCreatedAt(taskDto.getCreatedAt());
         task.setUpdatedAt(taskDto.getUpdatedAt());
+
         return task;
+
     }
 }

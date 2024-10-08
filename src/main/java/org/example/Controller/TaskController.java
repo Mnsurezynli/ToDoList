@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.persistence.GeneratedValue;
 import java.util.List;
 
-@RestController("/api/task")
+@RestController()
+@RequestMapping("/api/task")
 public class TaskController {
 
 
