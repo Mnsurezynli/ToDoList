@@ -75,9 +75,8 @@ public class TaskServiceImpl implements ITaskService {
                 .orElseThrow(() -> new ResourceNotFoundException("this task not found with id " + id));
         task.setUpdatedAt(LocalDateTime.now());
         task.setStatus(newStatus);
-        Task task1 = convertToEntity(taskDto);
-        taskRepository.saveAndFlush(task1);
-        TaskDto taskDto1 = convertToDto(task1);
+        taskRepository.saveAndFlush(task);
+        TaskDto taskDto1 = convertToDto(task);
         updateTaskList();
         saveTasksToFile();
         return taskDto1;
