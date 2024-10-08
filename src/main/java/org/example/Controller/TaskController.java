@@ -29,14 +29,14 @@ public class TaskController {
         return new ResponseEntity<>("this task add successfully", HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/TaskId")
+    @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteTask(@PathVariable Long id){
         iTaskService.deleteTask(id);
         return new ResponseEntity<>("this task deleted successfully", HttpStatus.OK);
     }
 
-    @PutMapping("/TaskId")
-    public  ResponseEntity<TaskDto> updateTask(@PathVariable Long id , @RequestBody  @Validated TaskDto taskDto, @RequestBody @Validated Status newStatus){
+    @PutMapping("/{id}")
+    public  ResponseEntity<TaskDto> updateTask(@PathVariable Long id , @RequestBody  @Validated TaskDto taskDto, @RequestParam Status newStatus){
       TaskDto updated=  iTaskService.updateTask(id,taskDto,newStatus);
         return new ResponseEntity<>(updated,HttpStatus.OK);
     }

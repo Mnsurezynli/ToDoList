@@ -7,12 +7,8 @@
     <list default="true" id="d4025297-cdab-4956-a622-8f695acb6100" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/85ade375-55ac-4932-a20a-c4098a9cc601.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/85ade375-55ac-4932-a20a-c4098a9cc601.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Dto/TaskDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Dto/TaskDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Model/Task.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Service/Impl/TaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Service/Impl/TaskServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +61,7 @@
       <workItem from="1728283083388" duration="8960000" />
       <workItem from="1728301556159" duration="499000" />
       <workItem from="1728367996043" duration="6466000" />
-      <workItem from="1728375344008" duration="2603000" />
+      <workItem from="1728375344008" duration="8839000" />
     </task>
     <servers />
   </component>
@@ -77,8 +73,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Controller/TaskController.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="9" />
+          <line>39</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

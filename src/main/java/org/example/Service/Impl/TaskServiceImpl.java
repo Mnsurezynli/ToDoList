@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
 public class TaskServiceImpl implements ITaskService {
 
     private TaskRepository taskRepository;
-    private static final String FILE_PATH = "tasks.json";
+    private static final String FILE_PATH = "/home/farazware/Downloads/ToDoList/tasks.json";
     private List<TaskDto> tasks = new ArrayList<>();
 
     @Autowired
@@ -40,8 +40,9 @@ public class TaskServiceImpl implements ITaskService {
         try {
             mapper.writeValue(new File(FILE_PATH), tasks);
         } catch (IOException e) {
-            throw new RuntimeException("can not write task to file ");
+            e.printStackTrace();
         }
+
     }
 
     private void updateTaskList() {
@@ -51,10 +52,6 @@ public class TaskServiceImpl implements ITaskService {
     @Transactional
     @Override
     public void addTask(TaskDto taskDto) {
-        Optional<Task> task = taskRepository.findById(taskDto.getId());
-        if (task.isPresent()) {
-            throw new TaskAlreadyExists("this task already exists");
-        }
         Task task1 = convertToEntity(taskDto);
         taskRepository.saveAndFlush(task1);
         updateTaskList();
@@ -76,10 +73,11 @@ public class TaskServiceImpl implements ITaskService {
     public TaskDto updateTask(Long id, TaskDto taskDto, Status newStatus) {
         Task task = taskRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("this task not found with id " + id));
-        task.setUpdatedAt(LocalDate.from(LocalDateTime.now()).atStartOfDay());
+        task.setUpdatedAt(LocalDateTime.now());
         task.setStatus(newStatus);
-        taskRepository.saveAndFlush(task);
-        TaskDto taskDto1 = convertToDto(task);
+        Task task1 = convertToEntity(taskDto);
+        taskRepository.saveAndFlush(task1);
+        TaskDto taskDto1 = convertToDto(task1);
         updateTaskList();
         saveTasksToFile();
         return taskDto1;
