@@ -1,0 +1,177 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"d4025297-cdab-4956-a622-8f695acb6100\" name=\"Changes\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/Service/Impl/TaskServiceImpl.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/Service/Impl/TaskServiceImpl.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProblemsViewState\">\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2n6AJ2fHnSLVAaLeTN1NOgOZmvK\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,\n    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,\n    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,\n    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;spring.configuration.checksum&quot;: &quot;79916f3936c4395971c7ad0f1ab0c480&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  },\n  &quot;keyToStringList&quot;: {\n    &quot;DatabaseDriversLRU&quot;: [\n      &quot;mysql&quot;\n    ]\n  }\n}</component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"d4025297-cdab-4956-a622-8f695acb6100\" name=\"Changes\" comment=\"\" />\n      <created>1728283081685</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1728283081685</updated>\n      <workItem from=\"1728283083388\" duration=\"8960000\" />\n      <workItem from=\"1728301556159\" duration=\"499000\" />\n      <workItem from=\"1728367996043\" duration=\"6466000\" />\n      <workItem from=\"1728375344008\" duration=\"11125000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/main/java/org/example/Controller/TaskController.java</url>\n          <line>63</line>\n          <option name=\"timeStamp\" value=\"27\" />\n        </line-breakpoint>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/main/java/org/example/Controller/TaskController.java</url>\n          <line>39</line>\n          <option name=\"timeStamp\" value=\"28\" />\n        </line-breakpoint>\n      </breakpoints>\n    </breakpoint-manager>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision b66d4038bd9bf718f92013d07716e6791ac0d564)
++++ b/.idea/workspace.xml	(date 1728391703410)
+@@ -5,6 +5,9 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="d4025297-cdab-4956-a622-8f695acb6100" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/TaskController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Repository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Repository/TaskRepository.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Service/Impl/TaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Service/Impl/TaskServiceImpl.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -47,6 +50,26 @@
+     ]
+   }
+ }</component>
++  <component name="RunManager">
++    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
++      <module name="ToDoList" />
++      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.Main" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="org.example.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Spring Boot.Main" />
++      </list>
++    </recent_temporary>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -58,7 +81,7 @@
+       <workItem from="1728283083388" duration="8960000" />
+       <workItem from="1728301556159" duration="499000" />
+       <workItem from="1728367996043" duration="6466000" />
+-      <workItem from="1728375344008" duration="11125000" />
++      <workItem from="1728375344008" duration="14724000" />
+     </task>
+     <servers />
+   </component>
+@@ -70,15 +93,15 @@
+       <breakpoints>
+         <line-breakpoint enabled="true" type="java-line">
+           <url>file://$PROJECT_DIR$/src/main/java/org/example/Controller/TaskController.java</url>
+-          <line>63</line>
+-          <option name="timeStamp" value="27" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Controller/TaskController.java</url>
+-          <line>39</line>
+-          <option name="timeStamp" value="28" />
++          <line>27</line>
++          <option name="timeStamp" value="32" />
+         </line-breakpoint>
+       </breakpoints>
+     </breakpoint-manager>
+   </component>
++  <component name="com.intellij.coverage.CoverageDataManagerImpl">
++    <SUITE FILE_PATH="coverage/ToDoList$Main.ic" NAME="Main Coverage Results" MODIFIED="1728390932076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++      <FILTER>org.example.*</FILTER>
++    </SUITE>
++  </component>
+ </project>
+\ No newline at end of file
+Index: src/main/java/org/example/Service/Impl/TaskServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example.Service.Impl;\n\nimport com.fasterxml.jackson.databind.ObjectMapper;\nimport org.example.Dto.TaskDto;\nimport org.example.Exception.ResourceNotFoundException;\nimport org.example.Exception.TaskAlreadyExists;\nimport org.example.Model.Status;\nimport org.example.Model.Task;\nimport org.example.Repository.TaskRepository;\nimport org.example.Service.ITaskService;\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.stereotype.Service;\n\nimport javax.transaction.Transactional;\nimport java.io.File;\nimport java.io.IOException;\nimport java.time.LocalDate;\nimport java.time.LocalDateTime;\nimport java.util.ArrayList;\nimport java.util.List;\nimport java.util.Optional;\nimport java.util.stream.Collectors;\n\n@Service\npublic class TaskServiceImpl implements ITaskService {\n\n    private TaskRepository taskRepository;\n    private static final String FILE_PATH = \"/home/farazware/Downloads/ToDoList/tasks.json\";\n    private List<TaskDto> tasks = new ArrayList<>();\n\n    @Autowired\n    public TaskServiceImpl(TaskRepository taskRepository) {\n        this.taskRepository = taskRepository;\n        this.tasks = getAll();\n    }\n\n    private void saveTasksToFile() {\n        ObjectMapper mapper = new ObjectMapper();\n        List<TaskDto> tasks = getAll();\n        try {\n            mapper.writeValue(new File(FILE_PATH), tasks);\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n\n    }\n\n    private void updateTaskList() {\n        this.tasks = getAll();\n    }\n\n    @Transactional\n    @Override\n    public void addTask(TaskDto taskDto) {\n        Task task1 = convertToEntity(taskDto);\n        taskRepository.saveAndFlush(task1);\n        updateTaskList();\n        saveTasksToFile();\n    }\n\n    @Transactional\n    @Override\n    public void deleteTask(Long id) {\n        Task task = taskRepository.findById(id)\n                .orElseThrow(() -> new ResourceNotFoundException(\" this task not found with id \" + id));\n        taskRepository.deleteById(id);\n        updateTaskList();\n        saveTasksToFile();\n    }\n\n\n    @Transactional\n    public TaskDto updateTask(Long id, TaskDto taskDto, Status newStatus) {\n        Task task = taskRepository.findById(id)\n                .orElseThrow(() -> new ResourceNotFoundException(\"this task not found with id \" + id));\n        task.setUpdatedAt(LocalDateTime.now());\n        task.setStatus(newStatus);\n        taskRepository.saveAndFlush(task);\n        TaskDto taskDto1 = convertToDto(task);\n        updateTaskList();\n        saveTasksToFile();\n        return taskDto1;\n    }\n\n\n    @Override\n    public List<TaskDto> getAll() {\n        List<Task> taskList = taskRepository.findAll();\n        return taskList.stream().map(this::convertToDto).collect(Collectors.toList());\n\n    }\n\n    @Override\n    public List<TaskDto> getAllDone() {\n        List<Task> taskList = taskRepository.findAll();\n        return taskList.stream().filter(task -> task.getStatus().equals(Status.DONE)).map(this::convertToDto).collect(Collectors.toList());\n\n    }\n\n    @Override\n    public List<TaskDto> getAllNotDone() {\n        List<Task> taskList = taskRepository.findAll();\n        return taskList.stream().filter(task -> task.getStatus().equals(Status.NOT_DONE)).map(this::convertToDto).collect(Collectors.toList());\n\n    }\n\n    @Override\n    public List<TaskDto> getAllInProgress() {\n        List<Task> taskList = taskRepository.findAll();\n        return taskList.stream().filter(task -> task.getStatus().equals(Status.IN_PROGRESS)).map(this::convertToDto).collect(Collectors.toList());\n\n    }\n\n\n    public TaskDto convertToDto(Task task) {\n        TaskDto taskDto = new TaskDto();\n        taskDto.setText(task.getText());\n        taskDto.setStatus(task.getStatus());\n        taskDto.setCreatedAt(task.getCreatedAt());\n        taskDto.setUpdatedAt(task.getUpdatedAt());\n        return taskDto;\n\n    }\n\n    public Task convertToEntity(TaskDto taskDto) {\n        Task task = new Task();\n        task.setText(taskDto.getText());\n        task.setStatus(taskDto.getStatus());\n        task.setCreatedAt(taskDto.getCreatedAt());\n        task.setUpdatedAt(taskDto.getUpdatedAt());\n\n        return task;\n\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/Service/Impl/TaskServiceImpl.java b/src/main/java/org/example/Service/Impl/TaskServiceImpl.java
+--- a/src/main/java/org/example/Service/Impl/TaskServiceImpl.java	(revision b66d4038bd9bf718f92013d07716e6791ac0d564)
++++ b/src/main/java/org/example/Service/Impl/TaskServiceImpl.java	(date 1728392217909)
+@@ -3,7 +3,6 @@
+ import com.fasterxml.jackson.databind.ObjectMapper;
+ import org.example.Dto.TaskDto;
+ import org.example.Exception.ResourceNotFoundException;
+-import org.example.Exception.TaskAlreadyExists;
+ import org.example.Model.Status;
+ import org.example.Model.Task;
+ import org.example.Repository.TaskRepository;
+@@ -14,11 +13,9 @@
+ import javax.transaction.Transactional;
+ import java.io.File;
+ import java.io.IOException;
+-import java.time.LocalDate;
+ import java.time.LocalDateTime;
+ import java.util.ArrayList;
+ import java.util.List;
+-import java.util.Optional;
+ import java.util.stream.Collectors;
+ 
+ @Service
+@@ -36,7 +33,7 @@
+ 
+     private void saveTasksToFile() {
+         ObjectMapper mapper = new ObjectMapper();
+-        List<TaskDto> tasks = getAll();
++        List<Task> tasks =taskRepository.findAll();
+         try {
+             mapper.writeValue(new File(FILE_PATH), tasks);
+         } catch (IOException e) {
+@@ -54,8 +51,6 @@
+     public void addTask(TaskDto taskDto) {
+         Task task1 = convertToEntity(taskDto);
+         taskRepository.saveAndFlush(task1);
+-        updateTaskList();
+-        saveTasksToFile();
+     }
+ 
+     @Transactional
+Index: src/main/java/org/example/Controller/TaskController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example.Controller;\n\nimport org.example.Dto.TaskDto;\nimport org.example.Model.Status;\nimport org.example.Service.ITaskService;\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.http.HttpStatus;\nimport org.springframework.http.ResponseEntity;\nimport org.springframework.validation.annotation.Validated;\nimport org.springframework.web.bind.annotation.*;\n\nimport javax.persistence.GeneratedValue;\nimport java.util.List;\n\n@RestController()\n@RequestMapping(\"/api/task\")\npublic class TaskController {\n\n\n    private ITaskService iTaskService;\n    @Autowired\n    public TaskController(ITaskService iTaskService) {\n        this.iTaskService = iTaskService;\n    }\n\n    @PostMapping(\"/add\")\n    public ResponseEntity<String> addTask(@RequestBody @Validated TaskDto taskDto){\n        iTaskService.addTask(taskDto);\n        return new ResponseEntity<>(\"this task add successfully\", HttpStatus.CREATED);\n    }\n\n    @DeleteMapping(\"/{id}\")\n    public ResponseEntity<String> deleteTask(@PathVariable Long id){\n        iTaskService.deleteTask(id);\n        return new ResponseEntity<>(\"this task deleted successfully\", HttpStatus.OK);\n    }\n\n    @PutMapping(\"/{id}\")\n    public  ResponseEntity<TaskDto> updateTask(@PathVariable Long id , @RequestBody  @Validated TaskDto taskDto, @RequestParam Status newStatus){\n      TaskDto updated=  iTaskService.updateTask(id,taskDto,newStatus);\n        return new ResponseEntity<>(updated,HttpStatus.OK);\n    }\n\n    @GetMapping(\"/all\")\n    public ResponseEntity<List<TaskDto>> getAll(){\n         List<TaskDto> taskDtos =iTaskService.getAll();\n        return  new ResponseEntity<>(taskDtos,HttpStatus.OK);\n    }\n\n    @GetMapping(\"/allDone\")\n    public  ResponseEntity<List<TaskDto>> getAllDone(){\n        List<TaskDto> taskDtos=iTaskService.getAllDone();\n        return new ResponseEntity<>(taskDtos,HttpStatus.OK);\n    }\n\n    @GetMapping(\"/allNotDone\")\n    public  ResponseEntity<List<TaskDto>> getAllNotDone(){\n        List<TaskDto> taskDtos=iTaskService.getAllNotDone();\n        return new ResponseEntity<>(taskDtos,HttpStatus.OK);\n    }\n\n    @GetMapping(\"/InProgress\")\n    public  ResponseEntity<List<TaskDto>> getAllInProgress(){\n        List<TaskDto> taskDtos= iTaskService.getAllInProgress();\n        return new ResponseEntity<>(taskDtos,HttpStatus.OK);\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/Controller/TaskController.java b/src/main/java/org/example/Controller/TaskController.java
+--- a/src/main/java/org/example/Controller/TaskController.java	(revision b66d4038bd9bf718f92013d07716e6791ac0d564)
++++ b/src/main/java/org/example/Controller/TaskController.java	(date 1728390863861)
+@@ -37,13 +37,13 @@
+ 
+     @PutMapping("/{id}")
+     public  ResponseEntity<TaskDto> updateTask(@PathVariable Long id , @RequestBody  @Validated TaskDto taskDto, @RequestParam Status newStatus){
+-      TaskDto updated=  iTaskService.updateTask(id,taskDto,newStatus);
++        TaskDto updated=  iTaskService.updateTask(id,taskDto,newStatus);
+         return new ResponseEntity<>(updated,HttpStatus.OK);
+     }
+ 
+     @GetMapping("/all")
+     public ResponseEntity<List<TaskDto>> getAll(){
+-         List<TaskDto> taskDtos =iTaskService.getAll();
++        List<TaskDto> taskDtos =iTaskService.getAll();
+         return  new ResponseEntity<>(taskDtos,HttpStatus.OK);
+     }
+ 
+@@ -64,4 +64,4 @@
+         List<TaskDto> taskDtos= iTaskService.getAllInProgress();
+         return new ResponseEntity<>(taskDtos,HttpStatus.OK);
+     }
+-}
++}
+\ No newline at end of file
+Index: src/main/java/org/example/Repository/TaskRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example.Repository;\n\nimport org.example.Model.Task;\nimport org.springframework.data.jpa.repository.JpaRepository;\nimport org.springframework.data.jpa.repository.config.EnableJpaRepositories;\nimport org.springframework.stereotype.Repository;\n\nimport java.util.List;\nimport java.util.Optional;\n\n@Repository\n@EnableJpaRepositories\npublic interface TaskRepository extends JpaRepository<Task,Long> {\n\n    Optional<Task> findById(Long id);\n\n    List<Task> findAll();\n\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/Repository/TaskRepository.java b/src/main/java/org/example/Repository/TaskRepository.java
+--- a/src/main/java/org/example/Repository/TaskRepository.java	(revision b66d4038bd9bf718f92013d07716e6791ac0d564)
++++ b/src/main/java/org/example/Repository/TaskRepository.java	(date 1728391024467)
+@@ -17,4 +17,5 @@
+     List<Task> findAll();
+ 
+ 
++
+ }

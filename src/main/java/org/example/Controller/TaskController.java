@@ -1,7 +1,7 @@
 package org.example.Controller;
 
-import org.example.Dto.TaskDto;
 import org.example.Model.Status;
+import org.example.Model.Task;
 import org.example.Service.ITaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.GeneratedValue;
 import java.util.List;
 
 @RestController()
@@ -23,9 +22,10 @@ public class TaskController {
         this.iTaskService = iTaskService;
     }
 
+
     @PostMapping("/add")
-    public ResponseEntity<String> addTask(@RequestBody @Validated TaskDto taskDto){
-        iTaskService.addTask(taskDto);
+    public ResponseEntity<String> addTask(@RequestBody @Validated Task task){
+        iTaskService.addTask(task);
         return new ResponseEntity<>("this task add successfully", HttpStatus.CREATED);
     }
 
@@ -36,32 +36,32 @@ public class TaskController {
     }
 
     @PutMapping("/{id}")
-    public  ResponseEntity<TaskDto> updateTask(@PathVariable Long id , @RequestBody  @Validated TaskDto taskDto, @RequestParam Status newStatus){
-        TaskDto updated=  iTaskService.updateTask(id,taskDto,newStatus);
+    public  ResponseEntity<Task> updateTask(@PathVariable Long id , @RequestBody  @Validated Task task,@RequestParam Status newStatus){
+        Task updated=  iTaskService.updateTask(id,task,newStatus);
         return new ResponseEntity<>(updated,HttpStatus.OK);
     }
 
     @GetMapping("/all")
-    public ResponseEntity<List<TaskDto>> getAll(){
-        List<TaskDto> taskDtos =iTaskService.getAll();
-        return  new ResponseEntity<>(taskDtos,HttpStatus.OK);
+    public ResponseEntity<List<Task>> getAll(){
+        List<Task> tasks =iTaskService.getAll();
+        return  new ResponseEntity<>(tasks,HttpStatus.OK);
     }
 
     @GetMapping("/allDone")
-    public  ResponseEntity<List<TaskDto>> getAllDone(){
-        List<TaskDto> taskDtos=iTaskService.getAllDone();
-        return new ResponseEntity<>(taskDtos,HttpStatus.OK);
+    public  ResponseEntity<List<Task>> getAllDone(){
+        List<Task> tasks=iTaskService.getAllDone();
+        return new ResponseEntity<>(tasks,HttpStatus.OK);
     }
 
     @GetMapping("/allNotDone")
-    public  ResponseEntity<List<TaskDto>> getAllNotDone(){
-        List<TaskDto> taskDtos=iTaskService.getAllNotDone();
-        return new ResponseEntity<>(taskDtos,HttpStatus.OK);
+    public  ResponseEntity<List<Task>> getAllNotDone(){
+        List<Task> tasks=iTaskService.getAllNotDone();
+        return new ResponseEntity<>(tasks,HttpStatus.OK);
     }
 
     @GetMapping("/InProgress")
-    public  ResponseEntity<List<TaskDto>> getAllInProgress(){
-        List<TaskDto> taskDtos= iTaskService.getAllInProgress();
-        return new ResponseEntity<>(taskDtos,HttpStatus.OK);
+    public  ResponseEntity<List<Task>> getAllInProgress(){
+        List<Task> tasks= iTaskService.getAllInProgress();
+        return new ResponseEntity<>(tasks,HttpStatus.OK);
     }
 }

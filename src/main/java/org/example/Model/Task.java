@@ -1,5 +1,8 @@
 package org.example.Model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -15,9 +18,29 @@ public class Task {
     @Enumerated(EnumType.STRING)
     private Status status;
     @Column(name = "createdAt")
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime createdAt;
     @Column(name = "updatedAt")
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime updatedAt;
+
+
+    public Task(
+            @JsonProperty("id") Long id,
+            @JsonProperty("text") String text,
+            @JsonProperty("status") Status status,
+            @JsonProperty("createdAt") LocalDateTime createdAt,
+            @JsonProperty("updatedAt") LocalDateTime updatedAt) {
+        this.id = id;
+        this.text = text;
+        this.status = status;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
+
+    public Task() {
+
+    }
 
     public Long getId() {
         return id;

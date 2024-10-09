@@ -1,24 +1,29 @@
 package org.example.Service;
 
-import org.example.Dto.TaskDto;
 import org.example.Model.Status;
+import org.example.Model.Task;
 
 import java.util.List;
 
 public interface ITaskService {
-    void addTask(TaskDto taskDto);
+    List<Task> readTasksFromFile();
+
+    void saveTasksToFile();
+
+    void addTask(Task task);
 
     void deleteTask(Long id);
 
-    TaskDto updateTask(Long id, TaskDto taskDto, Status newStatus);
 
-    List<TaskDto> getAll();
+    Task updateTask(Long id, Task task,Status newStatus);
 
-    List<TaskDto> getAllNotDone();
+    List<Task> getAll();
 
-    List<TaskDto> getAllInProgress();
+    List<Task> getAllDone();
 
-    List<TaskDto> getAllDone();
+    List<Task> getAllNotDone();
+
+    List<Task> getAllInProgress();
 
 }
 
